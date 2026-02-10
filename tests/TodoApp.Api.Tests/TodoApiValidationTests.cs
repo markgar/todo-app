@@ -26,11 +26,12 @@ public class TodoApiValidationTests : IClassFixture<WebApplicationFactory<Progra
     public async Task PostTodo_IgnoresClientSuppliedIdAndIsComplete()
     {
         var response = await _client.PostAsJsonAsync("/api/todos",
-            new TodoItem { Title = "Mass assign test", IsComplete = true });
+            new TodoItem { Id = 9999, Title = "Mass assign test", IsComplete = true });
 
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
         var created = await response.Content.ReadFromJsonAsync<TodoItem>();
         Assert.NotNull(created);
+        Assert.NotEqual(9999, created.Id);
         Assert.False(created.IsComplete, "Server should ignore client-supplied IsComplete");
     }
 
