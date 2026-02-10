@@ -68,4 +68,4 @@
 - [x] 42. Verify all CRUD operations work correctly through the API endpoints
 - [x] 43. Start the Blazor front-end and verify it renders the todo list and supports add, complete, and delete operations
 - [x] 44. Confirm all projects are included in `TodoApp.sln` and the directory structure matches the spec (`src/` and `tests/`)
-- [ ] 46. Re-verify end-to-end: `dotnet build` succeeds with zero errors, `dotnet test` passes all tests, and `TodoApp.sln` (not `.slnx`) contains all projects matching the spec directory structure
+- [x] 46. Re-verify end-to-end: `dotnet build` succeeds with zero errors, `dotnet test` passes all tests, and `TodoApp.sln` (not `.slnx`) contains all projects matching the spec directory structure
