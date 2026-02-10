@@ -2,23 +2,23 @@
 
 ## Setup
 
-- [ ] 1. Install .NET 10 SDK prerequisites and verify `dotnet --version` returns 10.x
-- [ ] 2. Create the solution file `TodoApp.sln` at the repository root
-- [ ] 3. Create the directory structure: `src/TodoApp.Shared/`, `src/TodoApp.Data/`, `src/TodoApp.Api/`, `src/TodoApp.Web/`, and `tests/TodoApp.Api.Tests/`
-- [ ] 4. Remove any default scaffolding or template code that does not belong (e.g., auto-generated WeatherForecast files, Counter/Home boilerplate unrelated to todos)
+- [x] 1. Install .NET 10 SDK prerequisites and verify `dotnet --version` returns 10.x
+- [x] 2. Create the solution file `TodoApp.sln` at the repository root
+- [x] 3. Create the directory structure: `src/TodoApp.Shared/`, `src/TodoApp.Data/`, `src/TodoApp.Api/`, `src/TodoApp.Web/`, and `tests/TodoApp.Api.Tests/`
+- [x] 4. Remove any default scaffolding or template code that does not belong (e.g., auto-generated WeatherForecast files, Counter/Home boilerplate unrelated to todos)
 
 ## Shared Library (TodoApp.Shared)
 
-- [ ] 5. Create `TodoApp.Shared` class library project (`dotnet new classlib`) and add it to the solution
-- [ ] 6. Define the `TodoItem` model with properties: `Id` (int, auto-generated), `Title` (string, required), `IsComplete` (bool, default false)
-- [ ] 7. Remove any default `Class1.cs` placeholder file from the Shared project
+- [x] 5. Create `TodoApp.Shared` class library project (`dotnet new classlib`) and add it to the solution
+- [x] 6. Define the `TodoItem` model with properties: `Id` (int, auto-generated), `Title` (string, required), `IsComplete` (bool, default false)
+- [x] 7. Remove any default `Class1.cs` placeholder file from the Shared project
 
 ## Data Layer (TodoApp.Data)
 
-- [ ] 8. Create `TodoApp.Data` class library project and add it to the solution
-- [ ] 9. Add NuGet references: `Microsoft.EntityFrameworkCore.InMemory` to TodoApp.Data; add project reference to `TodoApp.Shared`
-- [ ] 10. Implement `TodoDbContext` inheriting from `DbContext` with a `DbSet<TodoItem>` property, configured to use `UseInMemoryDatabase("TodoDb")`
-- [ ] 11. Remove any default `Class1.cs` placeholder file from the Data project
+- [x] 8. Create `TodoApp.Data` class library project and add it to the solution
+- [x] 9. Add NuGet references: `Microsoft.EntityFrameworkCore.InMemory` to TodoApp.Data; add project reference to `TodoApp.Shared`
+- [x] 10. Implement `TodoDbContext` inheriting from `DbContext` with a `DbSet<TodoItem>` property, configured to use `UseInMemoryDatabase("TodoDb")`
+- [x] 11. Remove any default `Class1.cs` placeholder file from the Data project
 
 ## API Layer (TodoApp.Api)
 
