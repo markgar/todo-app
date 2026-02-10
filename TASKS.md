@@ -58,7 +58,7 @@
 
 ## Fix Spec Compliance
 
-- [ ] 45. Convert solution from `TodoApp.slnx` to `TodoApp.sln` — the spec requires a standard `.sln` file, not the newer `.slnx` format. Generate a traditional `.sln` using `dotnet sln` commands (create new `TodoApp.sln`, add all projects from `src/` and `tests/`), then remove `TodoApp.slnx`. Ensure `dotnet build` and `dotnet test` still work with the new `.sln`.
+- [x] 45. Convert solution from `TodoApp.slnx` to `TodoApp.sln` — the spec requires a standard `.sln` file, not the newer `.slnx` format. Generate a traditional `.sln` using `dotnet sln` commands (create new `TodoApp.sln`, add all projects from `src/` and `tests/`), then remove `TodoApp.slnx`. Ensure `dotnet build` and `dotnet test` still work with the new `.sln`.
 
 ## Verification
 
