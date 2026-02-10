@@ -56,6 +56,10 @@
 - [x] 37. Write test: `DELETE /api/todos/{id}` removes the todo and returns 204
 - [x] 38. Write test: `GET /api/todos/{id}` returns 404 for a non-existent id
 
+## Fix Spec Compliance
+
+- [ ] 45. Convert solution from `TodoApp.slnx` to `TodoApp.sln` — the spec requires a standard `.sln` file, not the newer `.slnx` format. Generate a traditional `.sln` using `dotnet sln` commands (create new `TodoApp.sln`, add all projects from `src/` and `tests/`), then remove `TodoApp.slnx`. Ensure `dotnet build` and `dotnet test` still work with the new `.sln`.
+
 ## Verification
 
 - [x] 39. Run `dotnet build` on the entire solution and verify zero errors
@@ -64,3 +68,4 @@
 - [x] 42. Verify all CRUD operations work correctly through the API endpoints
 - [x] 43. Start the Blazor front-end and verify it renders the todo list and supports add, complete, and delete operations
 - [x] 44. Confirm all projects are included in `TodoApp.sln` and the directory structure matches the spec (`src/` and `tests/`)
+- [ ] 46. Re-verify end-to-end: `dotnet build` succeeds with zero errors, `dotnet test` passes all tests, and `TodoApp.sln` (not `.slnx`) contains all projects matching the spec directory structure
