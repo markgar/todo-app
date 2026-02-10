@@ -58,9 +58,9 @@
 
 ## Verification
 
-- [ ] 39. Run `dotnet build` on the entire solution and verify zero errors
-- [ ] 40. Run `dotnet test` and verify all integration tests pass
-- [ ] 41. Start the API (`dotnet run --project src/TodoApp.Api`) and manually verify `GET /api/todos` returns at least 3 seeded todos
-- [ ] 42. Verify all CRUD operations work correctly through the API endpoints
-- [ ] 43. Start the Blazor front-end and verify it renders the todo list and supports add, complete, and delete operations
-- [ ] 44. Confirm all projects are included in `TodoApp.sln` and the directory structure matches the spec (`src/` and `tests/`)
+- [x] 39. Run `dotnet build` on the entire solution and verify zero errors
+- [x] 40. Run `dotnet test` and verify all integration tests pass
+- [x] 41. Start the API (`dotnet run --project src/TodoApp.Api`) and manually verify `GET /api/todos` returns at least 3 seeded todos
+- [x] 42. Verify all CRUD operations work correctly through the API endpoints
+- [x] 43. Start the Blazor front-end and verify it renders the todo list and supports add, complete, and delete operations
+- [x] 44. Confirm all projects are included in `TodoApp.sln` and the directory structure matches the spec (`src/` and `tests/`)
