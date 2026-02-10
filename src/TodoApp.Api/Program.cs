@@ -32,8 +32,12 @@ app.MapGet("/api/todos/{id}", async (int id, TodoDbContext db) =>
         ? Results.Ok(todo)
         : Results.NotFound());
 
-app.MapPost("/api/todos", async (TodoItem todo, TodoDbContext db) =>
+app.MapPost("/api/todos", async (TodoItem input, TodoDbContext db) =>
 {
+    if (string.IsNullOrWhiteSpace(input.Title))
+        return Results.BadRequest("Title is required and cannot be empty.");
+
+    var todo = new TodoItem { Title = input.Title, IsComplete = false };
     db.Todos.Add(todo);
     await db.SaveChangesAsync();
     return Results.Created($"/api/todos/{todo.Id}", todo);
@@ -41,6 +45,9 @@ app.MapPost("/api/todos", async (TodoItem todo, TodoDbContext db) =>
 
 app.MapPut("/api/todos/{id}", async (int id, TodoItem input, TodoDbContext db) =>
 {
+    if (string.IsNullOrWhiteSpace(input.Title))
+        return Results.BadRequest("Title is required and cannot be empty.");
+
     var todo = await db.Todos.FindAsync(id);
     if (todo is null) return Results.NotFound();
 
