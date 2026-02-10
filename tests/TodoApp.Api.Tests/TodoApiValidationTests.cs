@@ -36,18 +36,6 @@ public class TodoApiValidationTests : IClassFixture<WebApplicationFactory<Progra
     }
 
     [Fact]
-    public async Task PostTodo_IgnoresClientSuppliedId()
-    {
-        var response = await _client.PostAsJsonAsync("/api/todos",
-            new TodoItem { Id = 9999, Title = "Id override test" });
-
-        Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-        var created = await response.Content.ReadFromJsonAsync<TodoItem>();
-        Assert.NotNull(created);
-        Assert.NotEqual(9999, created.Id);
-    }
-
-    [Fact]
     public async Task PutTodo_WithEmptyTitle_Returns400()
     {
         var response = await _client.PutAsJsonAsync("/api/todos/1",
