@@ -46,15 +46,15 @@
 
 ## Integration Tests (TodoApp.Api.Tests)
 
-- [ ] 30. Create `TodoApp.Api.Tests` xUnit test project (`dotnet new xunit`) and add it to the solution
-- [ ] 31. Add NuGet reference `Microsoft.AspNetCore.Mvc.Testing` and project reference to `TodoApp.Api`
-- [ ] 32. Set up a test class using `WebApplicationFactory<Program>` to create an in-process test server
-- [ ] 33. Write test: `GET /api/todos` returns 200 and the response contains the seeded todos (at least 3)
-- [ ] 34. Write test: `POST /api/todos` with a valid title creates a new todo and returns 201
-- [ ] 35. Write test: `GET /api/todos/{id}` returns 200 and the correct todo for an existing id
-- [ ] 36. Write test: `PUT /api/todos/{id}` updates a todo's title and/or isComplete and returns 200
-- [ ] 37. Write test: `DELETE /api/todos/{id}` removes the todo and returns 204
-- [ ] 38. Write test: `GET /api/todos/{id}` returns 404 for a non-existent id
+- [x] 30. Create `TodoApp.Api.Tests` xUnit test project (`dotnet new xunit`) and add it to the solution
+- [x] 31. Add NuGet reference `Microsoft.AspNetCore.Mvc.Testing` and project reference to `TodoApp.Api`
+- [x] 32. Set up a test class using `WebApplicationFactory<Program>` to create an in-process test server
+- [x] 33. Write test: `GET /api/todos` returns 200 and the response contains the seeded todos (at least 3)
+- [x] 34. Write test: `POST /api/todos` with a valid title creates a new todo and returns 201
+- [x] 35. Write test: `GET /api/todos/{id}` returns 200 and the correct todo for an existing id
+- [x] 36. Write test: `PUT /api/todos/{id}` updates a todo's title and/or isComplete and returns 200
+- [x] 37. Write test: `DELETE /api/todos/{id}` removes the todo and returns 204
+- [x] 38. Write test: `GET /api/todos/{id}` returns 404 for a non-existent id
 
 ## Verification
 
