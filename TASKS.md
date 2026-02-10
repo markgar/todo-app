@@ -35,14 +35,14 @@
 
 ## Web Front-End (TodoApp.Web)
 
-- [ ] 22. Create `TodoApp.Web` Blazor project (`dotnet new blazor` or `dotnet new blazorserver`) and add it to the solution
-- [ ] 23. Add project reference from TodoApp.Web to `TodoApp.Shared`
-- [ ] 24. Configure `HttpClient` in `Program.cs` to point to the API base URL (e.g., `https://localhost:{port}`)
-- [ ] 25. Create a Todo List page/component that fetches and displays all todos from `GET /api/todos`, showing each todo's title and completion status
-- [ ] 26. Add an "Add Todo" form/input that sends a `POST /api/todos` request to create a new todo by title, then refreshes the list
-- [ ] 27. Add a "Complete/Toggle" button for each todo that sends a `PUT /api/todos/{id}` request to toggle `IsComplete`, then refreshes the list
-- [ ] 28. Add a "Delete" button for each todo that sends a `DELETE /api/todos/{id}` request to remove it, then refreshes the list
-- [ ] 29. Remove any default template pages/components not related to the todo functionality (e.g., Counter, Weather, default Home content)
+- [x] 22. Create `TodoApp.Web` Blazor project (`dotnet new blazor` or `dotnet new blazorserver`) and add it to the solution
+- [x] 23. Add project reference from TodoApp.Web to `TodoApp.Shared`
+- [x] 24. Configure `HttpClient` in `Program.cs` to point to the API base URL (e.g., `https://localhost:{port}`)
+- [x] 25. Create a Todo List page/component that fetches and displays all todos from `GET /api/todos`, showing each todo's title and completion status
+- [x] 26. Add an "Add Todo" form/input that sends a `POST /api/todos` request to create a new todo by title, then refreshes the list
+- [x] 27. Add a "Complete/Toggle" button for each todo that sends a `PUT /api/todos/{id}` request to toggle `IsComplete`, then refreshes the list
+- [x] 28. Add a "Delete" button for each todo that sends a `DELETE /api/todos/{id}` request to remove it, then refreshes the list
+- [x] 29. Remove any default template pages/components not related to the todo functionality (e.g., Counter, Weather, default Home content)
 
 ## Integration Tests (TodoApp.Api.Tests)
 
