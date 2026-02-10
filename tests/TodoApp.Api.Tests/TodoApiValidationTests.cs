@@ -35,11 +35,40 @@ public class TodoApiValidationTests : IClassFixture<WebApplicationFactory<Progra
     }
 
     [Fact]
+    public async Task PostTodo_IgnoresClientSuppliedId()
+    {
+        var response = await _client.PostAsJsonAsync("/api/todos",
+            new TodoItem { Id = 9999, Title = "Id override test" });
+
+        Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+        var created = await response.Content.ReadFromJsonAsync<TodoItem>();
+        Assert.NotNull(created);
+        Assert.NotEqual(9999, created.Id);
+    }
+
+    [Fact]
     public async Task PutTodo_WithEmptyTitle_Returns400()
     {
         var response = await _client.PutAsJsonAsync("/api/todos/1",
             new TodoItem { Title = "", IsComplete = false });
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task PutTodo_NonExistentId_Returns404()
+    {
+        var response = await _client.PutAsJsonAsync("/api/todos/99999",
+            new TodoItem { Title = "Does not exist", IsComplete = false });
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task DeleteTodo_NonExistentId_Returns404()
+    {
+        var response = await _client.DeleteAsync("/api/todos/99999");
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
 }
